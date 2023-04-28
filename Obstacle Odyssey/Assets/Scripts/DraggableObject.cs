@@ -4,10 +4,18 @@ public class DraggableObject : MonoBehaviour
 {
     private bool isDragging = false;
     private Rigidbody2D rb;
+    private Vector2 startPos;
+    private Vector2 offset;
+    private CircleCollider2D circleCollider2D;
+    private BoxCollider2D boxCollider2D;
+    private RectTransform rectTransform;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        circleCollider2D = GetComponent<CircleCollider2D>();
+        boxCollider2D = GameObject.FindGameObjectWithTag("Square").GetComponent<BoxCollider2D>();
+        rectTransform = GameObject.FindGameObjectWithTag("Square").GetComponent<RectTransform>();
     }
 
     private void OnMouseDown()
