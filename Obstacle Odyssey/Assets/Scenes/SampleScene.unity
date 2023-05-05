@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dd32e30b01df0c46a0f513cca390c88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blockPrefab: {fileID: 0}
+  blockPrefab: {fileID: 727732182}
   spawnRate: 1
   spawnHeight: 10
 --- !u!4 &22108565
