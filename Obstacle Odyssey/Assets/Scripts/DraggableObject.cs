@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DraggableObject : MonoBehaviour
 {
@@ -7,15 +8,13 @@ public class DraggableObject : MonoBehaviour
     private Vector2 startPos;
     private Vector2 offset;
     private CircleCollider2D circleCollider2D;
-    private BoxCollider2D boxCollider2D;
     private RectTransform rectTransform;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         circleCollider2D = GetComponent<CircleCollider2D>();
-        boxCollider2D = GameObject.FindGameObjectWithTag("Square").GetComponent<BoxCollider2D>();
-        rectTransform = GameObject.FindGameObjectWithTag("Square").GetComponent<RectTransform>();
+        rectTransform = GetComponent<RectTransform>();
     }
 
     private void OnMouseDown()
@@ -32,19 +31,16 @@ public class DraggableObject : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "StaticObject")
+        if (collision.gameObject.tag == "Obstaculo")
         {
-            rb.velocity = Vector2.zero;
-            rb.angularVelocity = 0f;
-            transform.SetParent(collision.transform);
+            SceneManager.LoadScene("GameOver");
+            Debug.Log("GameOver");
         }
-    }
 
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "StaticObject")
+        if (collision.gameObject.tag == "punto")
         {
-            transform.SetParent(null);
+            Destroy(collision.gameObject);
+            Debug.Log("Punto");
         }
     }
 
