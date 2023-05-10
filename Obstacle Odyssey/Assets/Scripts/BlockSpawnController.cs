@@ -19,11 +19,17 @@ public class BlockSpawnController : MonoBehaviour
             // Seleccionar un bloque aleatorio de la lista
             int index = Random.Range(0, blockPrefabs.Count);
 
-            // Instanciar el bloque en la posición correcta
+            // Restablecer las transformaciones locales de los objetos hijos
+            foreach (Transform child in gameObject.transform)
+            {
+               child.ResetLocalTransform();
+            }
+
+            // Instanciar el bloque en la posicion correcta
             Vector3 spawnPosition = new Vector3(Random.Range(leftBound, rightBound), spawnHeight, 0.0f);
             Instantiate(blockPrefabs[index], spawnPosition, Quaternion.identity);
 
-            // Establecer el próximo tiempo de aparición
+            // Establecer el proximo tiempo de aparicion
             nextSpawnTime = Time.time + spawnRate;
         }
     }
