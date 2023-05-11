@@ -20,10 +20,10 @@ public class BlockSpawnController : MonoBehaviour
             int index = Random.Range(0, blockPrefabs.Count);
 
             // Restablecer las transformaciones locales de los objetos hijos
-            foreach (Transform child in gameObject.transform)
-            {
-               child.ResetLocalTransform();
-            }
+            //foreach (Transform child in gameObject.transform)
+            //{
+            //   child.ResetLocalTransform();
+            //}
 
             // Instanciar el bloque en la posicion correcta
             Vector3 spawnPosition = new Vector3(Random.Range(leftBound, rightBound), spawnHeight, 0.0f);

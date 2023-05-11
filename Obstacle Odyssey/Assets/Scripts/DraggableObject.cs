@@ -40,6 +40,7 @@ public class DraggableObject : MonoBehaviour
         if (collision.gameObject.tag == "punto")
         {
             Destroy(collision.gameObject);
+            ScoreManager.instance.AddPoint();
             Debug.Log("Punto");
         }
     }
