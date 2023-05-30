@@ -215,6 +215,7 @@ GameObject:
   - component: {fileID: 87931434}
   - component: {fileID: 87931433}
   - component: {fileID: 87931432}
+  - component: {fileID: 87931435}
   m_Layer: 0
   m_Name: ObstaculoDiagonalIzquierda
   m_TagString: Obstaculo
@@ -231,7 +232,7 @@ Transform:
   m_GameObject: {fileID: 87931430}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -367, y: -4, z: 12.054157}
-  m_LocalScale: {x: 100, y: 140, z: 1}
+  m_LocalScale: {x: 100, y: 80, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 650174416}
@@ -268,14 +269,14 @@ PolygonCollider2D:
       - {x: -0.31682742, y: -0.23951228}
       - {x: -0.5207312, y: -0.12695086}
       - {x: -1.2337793, y: 0.26951253}
-    - - {x: -0.02, y: 0.275}
-      - {x: 0.020731423, y: 0.26695088}
-      - {x: -0.01, y: 0.24499999}
-      - {x: 0.14999999, y: 0.155}
-      - {x: 0.2630484, y: 0.12146336}
-      - {x: 0.67768276, y: -0.113049135}
-      - {x: 0.9991452, y: -0.2749999}
-      - {x: 0.93, y: -0.275}
+    - - {x: 0.602803, y: 0.2703934}
+      - {x: 0.5845708, y: 0.26234424}
+      - {x: 0.5943768, y: 0.26803315}
+      - {x: 0.59222686, y: 0.2793767}
+      - {x: 0.6389414, y: 0.22741352}
+      - {x: 0.87668484, y: 0.05278644}
+      - {x: 1.1834061, y: -0.1920821}
+      - {x: 1.2911518, y: -0.27039415}
       - {x: 1.4499999, y: -0.275}
       - {x: 1.4499999, y: 0.275}
 --- !u!50 &87931433
@@ -351,6 +352,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &87931435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 87931430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac7c52e456b8324478ec2a3384a95bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberText: {fileID: 50938183}
+  startColorHex: '#37D471'
+  targetColorHex: '#FF5C5C'
+  targetTwoHex: '#62ADFF'
+  targetTreeHex: '#CE0FE8'
+  duration: 2
 --- !u!1 &449967048
 GameObject:
   m_ObjectHideFlags: 0
@@ -363,6 +382,7 @@ GameObject:
   - component: {fileID: 449967052}
   - component: {fileID: 449967051}
   - component: {fileID: 449967050}
+  - component: {fileID: 449967053}
   m_Layer: 0
   m_Name: ObstaculoDiagonalDerecha
   m_TagString: Obstaculo
@@ -379,7 +399,7 @@ Transform:
   m_GameObject: {fileID: 449967048}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -374, y: -76, z: 12.054157}
-  m_LocalScale: {x: 100, y: 140, z: 1}
+  m_LocalScale: {x: 100, y: 80, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 650174416}
@@ -433,17 +453,17 @@ PolygonCollider2D:
     m_Paths:
     - - {x: -1.4499999, y: 0.275}
       - {x: -1.4499999, y: -0.275}
-      - {x: -0.9896693, y: -0.26758242}
-      - {x: -0.9837353, y: -0.275}
-      - {x: -0.9874706, y: -0.2575827}
-      - {x: -0.6701014, y: -0.058510736}
-      - {x: -0.25227916, y: 0.20357078}
-      - {x: -0.123735346, y: 0.2624173}
-      - {x: -0.14747006, y: 0.27499965}
-    - - {x: 1.0286765, y: 0.275}
-      - {x: 0.14373535, y: -0.2720861}
-      - {x: 0.13780111, y: -0.27499974}
-      - {x: 0.1378012, y: -0.275}
+      - {x: -1.0803523, y: -0.26758242}
+      - {x: -1.0791907, y: -0.26903382}
+      - {x: -1.030426, y: -0.20985472}
+      - {x: -0.74646616, y: 0.0071150213}
+      - {x: -0.51955515, y: 0.20357078}
+      - {x: -0.4196481, y: 0.2624173}
+      - {x: -0.41474634, y: 0.27499965}
+    - - {x: 1.128905, y: 0.275}
+      - {x: 0.4348752, y: -0.2661203}
+      - {x: 0.46235067, y: -0.26903394}
+      - {x: 0.44325927, y: -0.2690342}
       - {x: 1.4499999, y: -0.275}
       - {x: 1.4499999, y: 0.275}
 --- !u!212 &449967052
@@ -498,6 +518,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &449967053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 449967048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac7c52e456b8324478ec2a3384a95bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberText: {fileID: 50938183}
+  startColorHex: '#37D471'
+  targetColorHex: '#FF5C5C'
+  targetTwoHex: '#62ADFF'
+  targetTreeHex: '#CE0FE8'
+  duration: 2
 --- !u!1 &478076709
 GameObject:
   m_ObjectHideFlags: 0
@@ -619,6 +657,7 @@ GameObject:
   m_Component:
   - component: {fileID: 497577165}
   - component: {fileID: 497577164}
+  - component: {fileID: 497577166}
   m_Layer: 0
   m_Name: Block Spawner
   m_TagString: Untagged
@@ -645,10 +684,14 @@ MonoBehaviour:
   - {fileID: 449967048}
   - {fileID: 87931430}
   punto: {fileID: 1461552561}
+  numberText: {fileID: 50938183}
+  startColor: {r: 1, g: 1, b: 1, a: 1}
+  targetColor: {r: 0, g: 0, b: 1, a: 1}
   spawnRate: 3
   spawnX: 140
-  spawnY: 600
-  spawnPointY: 650
+  spawnY: 1000
+  spawnPointY: 1050
+  initialFallSpeed: 10
 --- !u!4 &497577165
 Transform:
   m_ObjectHideFlags: 0
@@ -664,6 +707,102 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &497577166
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 497577163}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: bab0a4a4b118a7a4da54b7a823cc17d4, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &576121385
 GameObject:
   m_ObjectHideFlags: 0
@@ -674,6 +813,7 @@ GameObject:
   m_Component:
   - component: {fileID: 576121387}
   - component: {fileID: 576121386}
+  - component: {fileID: 576121388}
   m_Layer: 0
   m_Name: BackGround
   m_TagString: Untagged
@@ -723,7 +863,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.043137256, g: 0.76862746, b: 0.19215687, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -741,8 +881,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 576121385}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 138.231, y: 242.457, z: -4.12419}
-  m_LocalScale: {x: 273.16428, y: 485.12668, z: 1}
+  m_LocalPosition: {x: 135.8114, y: 243.6668, z: -4.12419}
+  m_LocalScale: {x: 277.99927, y: 487.5523, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1693442817}
@@ -750,6 +890,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &576121388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 576121385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac7c52e456b8324478ec2a3384a95bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberText: {fileID: 50938183}
+  startColorHex: '#0BC431'
+  targetColorHex: '#FFBA83'
+  targetTwoHex: '#9FFCFD'
+  targetTreeHex: '#910BA3'
+  duration: 2
 --- !u!1 &630982246
 GameObject:
   m_ObjectHideFlags: 0
@@ -1216,6 +1374,8 @@ MonoBehaviour:
   numberText: {fileID: 50938183}
   startColorHex: '#AAFFB9'
   targetColorHex: '#FFFE91'
+  targetTwoHex: '#3282F6'
+  targetTreeHex: '#E311FF'
   duration: 2
 --- !u!1 &1087863782
 GameObject:
@@ -1229,6 +1389,7 @@ GameObject:
   - component: {fileID: 1087863784}
   - component: {fileID: 1087863783}
   - component: {fileID: 1087863786}
+  - component: {fileID: 1087863787}
   m_Layer: 0
   m_Name: ObstaculoMedio
   m_TagString: Obstaculo
@@ -1312,7 +1473,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 3f04eeca6ee6d23489858b2d0ca43dae, type: 3}
-  m_Color: {r: 0.6663225, g: 0.9596081, b: 0.9622642, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1358,6 +1519,24 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1087863787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1087863782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac7c52e456b8324478ec2a3384a95bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberText: {fileID: 50938183}
+  startColorHex: '#37D471'
+  targetColorHex: '#FF5C5C'
+  targetTwoHex: '#62ADFF'
+  targetTreeHex: '#CE0FE8'
+  duration: 2
 --- !u!1 &1166401142
 GameObject:
   m_ObjectHideFlags: 0
@@ -1516,6 +1695,7 @@ GameObject:
   - component: {fileID: 1215079980}
   - component: {fileID: 1215079979}
   - component: {fileID: 1215079978}
+  - component: {fileID: 1215079981}
   m_Layer: 0
   m_Name: ObstaculoDerecha
   m_TagString: Obstaculo
@@ -1637,6 +1817,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1215079981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215079976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac7c52e456b8324478ec2a3384a95bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberText: {fileID: 50938183}
+  startColorHex: '#37D471'
+  targetColorHex: '#FF5C5C'
+  targetTwoHex: '#62ADFF'
+  targetTreeHex: '#CE0FE8'
+  duration: 2
 --- !u!1 &1272879165
 GameObject:
   m_ObjectHideFlags: 0
@@ -1647,6 +1845,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1272879166}
   - component: {fileID: 1272879167}
+  - component: {fileID: 1272879168}
   m_Layer: 0
   m_Name: Isometric Diamond
   m_TagString: Untagged
@@ -1711,7 +1910,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 3625043607559282579, guid: 19fb86013d8c24d6cb8410c0aadf30fa, type: 3}
-  m_Color: {r: 0.78431374, g: 1, b: 0.7882353, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1721,6 +1920,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1272879168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1272879165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac7c52e456b8324478ec2a3384a95bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberText: {fileID: 50938183}
+  startColorHex: '#C8FFC9'
+  targetColorHex: '#FFCD23'
+  targetTwoHex: '#D058FF'
+  targetTreeHex: '#BA0ED1'
+  duration: 2
 --- !u!1 &1461552561
 GameObject:
   m_ObjectHideFlags: 0
@@ -2050,6 +2267,7 @@ GameObject:
   - component: {fileID: 2102408766}
   - component: {fileID: 2102408765}
   - component: {fileID: 2102408764}
+  - component: {fileID: 2102408768}
   m_Layer: 0
   m_Name: ObstaculoIzquierda
   m_TagString: Obstaculo
@@ -2171,3 +2389,21 @@ Transform:
   m_Father: {fileID: 650174416}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2102408768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2102408763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac7c52e456b8324478ec2a3384a95bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberText: {fileID: 50938183}
+  startColorHex: '#37D471'
+  targetColorHex: '#FF5C5C'
+  targetTwoHex: '#62ADFF'
+  targetTreeHex: '#CE0FE8'
+  duration: 2
